@@ -15,10 +15,10 @@ radio.onReceivedNumber(function (receivedNumber) {
             cn = 0
             spd = 0
             
-            while (spd < 25) {
+            while (spd < 35) {
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, spd)
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, spd * 0.5)
-                spd += 1
+                spd += 2
                 basic.pause(10)
             }
         }
@@ -27,10 +27,10 @@ radio.onReceivedNumber(function (receivedNumber) {
         if (cn !== 1) {
             cn = 1
             spd = 0
-            while (spd < 25) {
+            while (spd < 35) {
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, spd)
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, spd * 0.5)
-                spd += 1
+                spd += 2
                 basic.pause(10)
             }
         }

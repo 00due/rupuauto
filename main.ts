@@ -15,9 +15,9 @@ radio.onReceivedNumber(function (receivedNumber) {
             cn = 0
             spd = 0
             
-            while (spd < 35) {
+            while (spd < 100) {
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, spd)
-                kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, spd * 0.5)
+                kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, spd)
                 spd += 2
                 basic.pause(10)
             }
@@ -27,9 +27,9 @@ radio.onReceivedNumber(function (receivedNumber) {
         if (cn !== 1) {
             cn = 1
             spd = 0
-            while (spd < 35) {
+            while (spd < 100) {
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, spd)
-                kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, spd * 0.5)
+                kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, spd)
                 spd += 2
                 basic.pause(10)
             }
@@ -39,7 +39,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         if (cn !== 2) {
             cn = 2
             spd = 0
-            while (spd < 50) {
+            while (spd < 100) {
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, spd)
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, spd)
                 spd += 1
@@ -61,7 +61,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         if (cn !== 4) {
             cn = 4
             spd = 0
-            while (spd < 50) {
+            while (spd < 100) {
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, spd)
                 kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, spd)
                 spd += 1
